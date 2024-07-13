@@ -17,13 +17,14 @@ Install dependencies:
 `npm install`
 
 ### Running the Application
-Build the Angular app:
-`npm run build`
-
 Start the development server:
 `npm start`
 
 Navigate to http://localhost:4200/ in your browser to view the application.
+
+### Building the Application
+Build the Angular app:
+`npm run build`
 
 ## Containerization
 
@@ -35,7 +36,7 @@ Navigate to http://localhost:4200/ in your browser to view the application.
 Build Docker image:
 `docker build -t portfolio-app .`
 
-This command builds a Docker image named portfolio-app using the Dockerfile in the current directory (.).
+This command builds a Docker image named `portfolio-app` using the `Dockerfile` in the current directory (.).
 
 ### 2. Running Docker Image
 Run the Docker container:
@@ -48,14 +49,18 @@ Access the application at http://localhost:8080.
 ## Using Docker Compose
 
 ### Docker Compose File (docker-compose.yml)
-Create a docker-compose.yml file in the project root:
-version: '3.8'
+Check the docker-compose.yml file in the project root:
+
+`version: '3.8'
 
 services:
   angular-app:
     build: .
     ports:
       - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    command: ["nginx", "-g", "daemon off;"]`
 
 ### Steps
 Build and run containers:
