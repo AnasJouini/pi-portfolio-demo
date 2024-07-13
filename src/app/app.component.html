@@ -1,0 +1,68 @@
+<!-- app -->
+<div class="art-app">
+  <!-- mobile top bar -->
+  <div class="art-mobile-top-bar"></div>
+  <!-- app wrapper -->
+  <div class="art-app-wrapper">
+    <!-- app container end -->
+    <div class="art-app-container">
+
+
+      <app-about-me></app-about-me>
+      <!-- content -->
+      <div class="art-content">
+
+        <!-- curtain -->
+        <div class="art-curtain"></div>
+
+        <!-- top background -->
+        <div class="art-top-bg" style="background-image: url(https://cdn.tomondre.com/other-assets/Background.jpg)">
+          <!-- overlay -->
+          <div class="art-top-bg-overlay"></div>
+          <!-- overlay end -->
+        </div>
+        <!-- top background end -->
+
+
+        <!-- swup container -->
+        <div class="transition-fade" id="swup">
+
+          <!-- scroll frame -->
+          <div id="scrollbar" class="art-scroll-frame">
+
+            <router-outlet></router-outlet>
+
+
+            <app-footer></app-footer>
+
+          </div>
+          <!-- scroll frame end -->
+
+        </div>
+        <!-- swup container end -->
+
+      </div>
+
+      <app-navigation></app-navigation>
+
+
+    </div>
+    <!-- app container end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+  <!-- preloader -->
+  <div class="art-preloader">
+    <!-- preloader content -->
+    <div class="art-preloader-content">
+      <!-- title -->
+      <h4>Team Esprit</h4>
+      <!-- progressbar -->
+      <div id="preloader" class="art-preloader-load"></div>
+    </div>
+    <!-- preloader content end -->
+  </div>
+  <!-- preloader end -->
+
+</div>
